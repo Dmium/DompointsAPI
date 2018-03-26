@@ -11,7 +11,7 @@ def hello_world():
 def hello_world_test():
     return jsonify([{"dat": 'Hello, World!' + str(randint(0, 10000))}])
 
-@app.route('/api/leaderboard')
+@app.route('/api/leaderboard/')
 def get_leaderboard():
     data = [
         { "username": 'Mod', "dom_points": 44 },
