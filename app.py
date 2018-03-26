@@ -13,7 +13,13 @@ def hello_world_test():
 
 @app.route('/api/leaderboard')
 def get_leaderboard():
-    return jsonify("[  { username: 'Mod', dom_points: 44 },  { username: 'Dom', dom_points: 45 },  { username: 'Some other guy', dom_points: 25 },  { username: 'Some guy', dom_points: 20 },  { username: 'Me', dom_points: 4 },]")
+    data = [
+        { username: 'Mod', dom_points: 44 },
+        { username: 'Dom', dom_points: 45 },
+        { username: 'Some other guy', dom_points: 25 },
+        { username: 'Some guy', dom_points: 20 },
+        { username: 'Me', dom_points: 4 }]
+    return jsonify(data)
 if __name__ == '__main__':
     app.debug = True
     port = int(os.environ.get("PORT", 5000))
