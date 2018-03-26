@@ -24,7 +24,7 @@ def get_leaderboard():
 @app.route('/api/bets/current/')
 def get_current_bets():
     data = [
-        { "initiator": 'Mod', "description": 'bleh', "dom_points": 4 },
+        { "initiator": 'Mod', "receiver": 'Dom', "description": 'bleh', "dom_points": 4 },
         { "initiator": 'Mod', "receiver": 'Dom', "description": 'bleh :(', "dom_points": 2 },
         { "initiator": 'Dom', "receiver": 'Some other guy', "description": 'An awful bet', "dom_points": 1 },
         { "initiator": 'Mod', "receiver": 'Some guy', "description": 'How did this even get approved?', "dom_points": 2 },
