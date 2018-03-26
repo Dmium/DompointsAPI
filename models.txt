@@ -1,0 +1,21 @@
+User
+-id
+-Username(Unique)
+-Bets(Via stances?)
+-Stances(Via Bets?)
+-Dompoints
+
+Bet
+-id
+-Stances
+-Total Dompoints(Probably don't store this)
+-Description(Created by initiator)
+-Users
+-Approved(Set by moderator)
+-Correct Stance(Settings this allows bet to proceed if bet is approved)
+
+Stance
+-id
+-Value(Value of each individual stance allowing uneven bets)
+-Name(Non-Unique)
+-Users
