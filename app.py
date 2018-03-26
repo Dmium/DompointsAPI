@@ -20,6 +20,17 @@ def get_leaderboard():
         { "username": 'Some guy', "dom_points": 20 },
         { "username": 'Me', "dom_points": 4 }]
     return jsonify(data)
+
+@app.route('/api/bets/current/')
+def get_current_bets():
+    data = [
+        { "username": 'Mod', "description": 'bleh', "dom_points": 4 },
+        { "username": 'Dom', "description": 'bleh :(', "dom_points": 2 },
+        { "username": 'Some other guy', "description": 'An awful bet', "dom_points": 1 },
+        { "username": 'Some guy', "description": 'How did this even get approved?', "dom_points": 2 },
+        { "username": 'Me', "description": '>.>', "dom_points": 1 }]
+    return jsonify(data)
+
 if __name__ == '__main__':
     app.debug = True
     port = int(os.environ.get("PORT", 5000))
